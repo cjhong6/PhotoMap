@@ -99,18 +99,18 @@ extension PhotoMapViewController: LocationsViewControllerDelegate{
 }
 
 //custom pin as photo
-extension PhotoMapViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotationViewReuseIden")
-        if annotationView == nil{
-            annotationView = MKAnnotationView()
-        }
-        
-        let thumbnail = self.resize(image: self.photo, newSize: CGSize(width: 60, height: 60))
-        
-        //set the pin image
-        annotationView?.image = thumbnail
-        return annotationView
-    }
-
-}
+//extension PhotoMapViewController: MKMapViewDelegate {
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotationViewReuseIden")
+//        if annotationView == nil{
+//            annotationView = MKAnnotationView()
+//        }
+//        
+//        let thumbnail = self.resize(image: self.photo, newSize: CGSize(width: 60, height: 60))
+//        
+//        //set the pin image
+//        annotationView?.image = thumbnail
+//        return annotationView
+//    }
+//
+//}
